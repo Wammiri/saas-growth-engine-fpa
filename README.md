@@ -1,41 +1,47 @@
-# SaaS Growth Engine: Revenue Forecasting & Churn Optimization Dashboard
+# SaaS Growth Engine
 
-## Overview
-This project analyzes financial data from 500 SaaS companies to forecast revenue growth, benchmark churn, and simulate profitability scenarios.  
-The goal is to show how FP&A teams can optimize SaaS growth by improving churn rates, pricing strategies, and LTV:CAC ratios.
+A planned analysis of SaaS company finances: benchmark churn, forecast recurring revenue and test what-if scenarios, with a Streamlit dashboard on top.
 
-## Dataset
-- **Source**: [SaaS Financial Market Dataset](https://www.kaggle.com/datasets/tanishqpratap/saas-financial-market-dataset)
-- Metrics include: MRR, ARR, churn rate, CAC, LTV, employee count, funding, and revenue history.
+> **Status: planned, not built.** The repo holds the structure and the project plan. The notebook, the app and the report are placeholders, and the dataset is not included.
 
-## Features (Planned)
-1. **Data Cleaning & Metrics**  
-   - ARR, LTV, LTV:CAC ratios  
-   - Growth rate calculations  
+## The plan
 
-2. **Exploratory Analysis & Benchmarking**  
-   - Churn by company size  
-   - ARR growth distribution  
-   - LTV:CAC quartiles  
+1. **Clean the data** and compute annual recurring revenue (ARR), lifetime value (LTV), LTV to acquisition cost, and growth rates.
+2. **Benchmark** churn by company size, ARR growth, and LTV to acquisition cost by quartile.
+3. **Forecast** ARR and churn with Prophet, and test pricing, churn and acquisition cost scenarios, including Monte Carlo simulation.
+4. **Build the dashboard** in Streamlit, with scenario sliders.
 
-3. **Forecasting & Scenario Analysis**  
-   - ARR and churn forecasting with Prophet  
-   - What-if scenarios (pricing, churn reduction, CAC changes)  
-   - Monte Carlo simulations  
+The full checklist is in [docs/project_plan.md](docs/project_plan.md).
 
-4. **Interactive Dashboard (Streamlit)**  
-   - ARR projections  
-   - Churn benchmarks  
-   - Scenario sliders  
+## Data
 
-## Tech Stack
-- Python (pandas, numpy, prophet, plotly, matplotlib)
-- Streamlit for dashboard
-- Google Colab / Jupyter Notebook
+[SaaS Financial Market Dataset](https://www.kaggle.com/datasets/tanishqpratap/saas-financial-market-dataset) on Kaggle, covering 500 companies. Download it and put it in `data/raw/`.
 
-## How to Run (coming soon)
-Instructions will be added once the notebook and Streamlit app are complete.
+## Set up
 
----
+Needs Python 3.
 
-🚀 *Work in progress. Follow this repo for updates.*
+```bash
+git clone https://github.com/Wammiri/saas-growth-engine-fpa.git
+cd saas-growth-engine-fpa
+python -m venv .venv
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+There is nothing to run yet. Once the app exists it will start with `streamlit run app.py`.
+
+## Project structure
+
+```text
+app.py          the Streamlit app (placeholder)
+notebooks/      the analysis notebook (placeholder)
+data/raw/       the dataset goes here
+data/processed/ cleaned data
+docs/           the project plan
+reports/        the summary report (placeholder)
+```
+
+## Author
+
+[Isaac Olorode](https://isaac.aperio.finance)
